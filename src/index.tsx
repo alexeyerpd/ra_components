@@ -8,7 +8,7 @@ import './styles/root.scss';
 const root = createRoot(getRootContainer());
 
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>,
 );

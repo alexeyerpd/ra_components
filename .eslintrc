@@ -14,13 +14,16 @@
         "sourceType": "module",
         "project": "./src/tsconfig.json"
     },
+    "env": {
+        "node": true
+    },
     "rules": {
         "import/order": "off",
         "valid-jsdoc": "off",
         "react/react-in-jsx-scope": 0,
         "react-hooks/exhaustive-deps": "error",
         "new-cap": 0,
-        "indent": 4,
+        "indent": 1,
         "prefer-arrow-callback": "off",
         "no-restricted-syntax": [
             "error",
@@ -59,10 +62,7 @@
         {
             "files": ["**/*.js", "**/*.ts", "**/*.tsx"],
             "rules": {
-                "@typescript-eslint/consistent-type-definitions": [
-                    "error",
-                    "interface"
-                ],
+                "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
                 "simple-import-sort/imports": [
                     "error",
                     {

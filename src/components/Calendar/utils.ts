@@ -22,7 +22,7 @@ export function getCalendar(date: Moment) {
     const decIterator = dayController(startDate, 'dec');
     const incIterator = dayController(endDate, 'inc');
 
-    for (let curr of decIterator(1)) {
+    for (const curr of decIterator(1)) {
         result.push({class: dict.BEFORE, value: curr.date()});
     }
     result.reverse();
@@ -34,7 +34,7 @@ export function getCalendar(date: Moment) {
         });
     }
 
-    for (let curr of incIterator(0)) {
+    for (const curr of incIterator(0)) {
         result.push({class: dict.AFTER, value: curr.date()});
     }
 
@@ -43,7 +43,7 @@ export function getCalendar(date: Moment) {
 
 function dayController(initialDate: Moment, type: 'inc' | 'dec') {
     return function* (numDay: number) {
-        let current = initialDate;
+        const current = initialDate;
         yield current;
 
         while (true) {
